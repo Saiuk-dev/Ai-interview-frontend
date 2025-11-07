@@ -56,7 +56,7 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/dashboard"
+              href="/interview/setup"
               className="inline-flex items-center bg-[#DFB6B2] text-[#190019] px-8 py-3 rounded-lg text-lg font-medium hover:bg-[#FBE4D8] transition-colors shadow-lg"
             >
               Upload Resume & Start
@@ -200,7 +200,7 @@ export default function HomePage() {
                   questions in under 2 minutes
                 </p>
                 <Link
-                  href="/dashboard"
+                  href="/interview/setup"
                   className="inline-flex items-center bg-[#190019] text-[#FBE4D8] px-6 py-3 rounded-lg font-medium hover:bg-[#522B5B] transition-colors shadow-lg"
                 >
                   Upload Resume Now

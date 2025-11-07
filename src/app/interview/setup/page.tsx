@@ -78,7 +78,7 @@ export default function InterviewSetupPage() {
         videoRef.current.srcObject = stream;
       }
       setPermissions({ video: true, audio: true });
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error("Error accessing media devices.", err);
       let errorMessage = "An unknown error occurred while accessing media devices.";
       if (err instanceof DOMException) {
