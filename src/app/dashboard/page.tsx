@@ -48,7 +48,8 @@ export default function Dashboard() {
       // If you see this message, it means the function is about to send the request.
       console.log('File found. Preparing to send fetch request...');
 
-      const response = await fetch('http://localhost:5000/api/resume/upload', {
+      const response = await fetch('${process.env.NEXT_PUBLIC_API_URL}/api/resume/upload', {
+      
         method: 'POST',
         body: formData,
       });

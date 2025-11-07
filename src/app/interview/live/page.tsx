@@ -49,7 +49,7 @@ const AIVoiceInterview = () => {
       if (!storedUserData || !storedDifficulty) throw new Error("User data or difficulty not found.");
       const userData = JSON.parse(storedUserData);
       const difficulty = storedDifficulty;
-      const response = await fetch('http://localhost:5000/api/interview/questions', {
+      const response = await fetch('`${process.env.NEXT_PUBLIC_API_URL}/api/interview/questions', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ role: userData.role, skills: userData.skills, difficulty: difficulty, round: roundName }),
@@ -174,7 +174,7 @@ const AIVoiceInterview = () => {
     // Evaluate code if it's the coding round
     if (interviewRounds[currentRoundIndex] === 'Coding') {
       try {
-        const response = await fetch('http://localhost:5000/api/code/evaluate', {
+        const response = await fetch('${process.env.NEXT_PUBLIC_API_URL}/api/code/evaluate', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
